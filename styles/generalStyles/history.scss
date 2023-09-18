@@ -1,0 +1,26 @@
+.history__iframe {
+  align-self: center;
+  width: 90vmin;
+  height: 51vmin;
+}
+
+.history__ankis-title {
+  margin: 0 auto;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.history__ankis-paragraph {
+  margin-top: 50px;
+}
+
+
+@media (min-width: 1023px) {
+  .history__ankis-paragraph {
+    margin-top: 100px;
+  }
+
+  .history__ankis-title {
+    margin-bottom: 50px;
+  }
+}

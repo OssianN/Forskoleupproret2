@@ -1,0 +1,136 @@
+
+.omHashtagen {
+  display: flex;
+  flex-direction: column;
+  min-height: 85%;
+  text-align: center;
+  background-color: white;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.main-header.laws {
+  margin-bottom: 50px;
+}
+
+.main-header__h1.laws {
+  margin-bottom: 10px;
+  font-size: 3.5rem;
+  line-height: 3rem;
+}
+
+.main-h2.laws__h2 {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.laws__link {
+  color: $forange;
+}
+
+.laws__grid-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  margin-top: 100px;
+}
+
+.laws__section-span {
+  width: 40%;
+  min-width: 200px;
+  height: 3px;
+  background-color: $forange;
+  margin-top: 30px;
+}
+
+.laws__blob {
+  position: absolute;
+  height: 500px;
+}
+
+.laws__h1 {
+  margin-bottom: 10px;
+}
+
+.laws__blob--rotate90 {
+  transform: rotate(90deg);
+}
+
+.laws__blob--rotate125 {
+  transform: rotate(125deg);
+}
+
+.laws__blob--rotate300 {
+  transform: rotate(300deg);
+}
+
+.vittnesmal__container {
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+  padding: 30px 0;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  border-radius: .75rem;
+  max-width: 600px;
+}
+
+.main-h2.vittnesmal__h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.vittnesmal__p.main-p {
+  margin-bottom: 30px;
+}
+
+.vittnesmal__img {
+  position: absolute;
+  margin-top: -355px;
+  height: 100%;
+  z-index: -1;
+}
+
+.vittnesmal__textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  height: 300px;
+  padding: 30px;
+  z-index: 10;
+}
+
+.vittnesmal__link {
+  line-height: 1.7rem;
+}
+
+@media (min-width: 375px) {
+  .vittnesmal__textbox {
+    height: 250px;
+  }
+
+  .vittnesmal__img {
+    margin-top: -315px;
+  }
+}
+
+
+@media (min-width: 435px) {
+  .vittnesmal__textbox {
+    height: 220px;
+    padding-top: 0;
+  }
+
+  .vittnesmal__img {
+    height: 150%;
+    margin-top: -390px;
+  }
+}

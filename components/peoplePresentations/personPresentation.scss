@@ -1,0 +1,155 @@
+$forange: #ff9f50;
+
+@keyframes person-card {
+  0% {
+    opacity: 0;
+    margin-left: 20px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+.person-content__wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0 0 5vmin #2929299c;
+  overflow-y: scroll;
+  z-index: 200;
+}
+
+.show-person {
+  margin-left: 0;
+  transition: 1s;
+}
+
+.person-content__container {
+  width: 80%;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.person-content__exit-person-button {
+  position: sticky;
+  top: 20px;
+  border: none;
+  background-color: transparent;
+  align-self: flex-start;
+  margin-top: 20px;
+  margin-left: -20px;
+}
+
+.person-content__name-h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.person-content__img {
+  max-width: 400px;
+  width: 90%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.person-content__bread-text {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.person-card__container {
+  width: calc(100% - 80px);
+  max-width: calc(700px - 80px);
+  border-radius: .75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 50px auto;
+  padding: 40px;
+  box-shadow: 0 1px 10px #2c2c2c1e;
+}
+
+.person-card__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.person-card__person-name {
+  margin-bottom: 50px;
+  font-size: 2rem;
+  text-align: center;
+  animation: person-card 1s;
+}
+
+.person-card__person-img {
+  max-width: 400px;
+  width: 100%;
+  margin-bottom: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+  animation: person-card 1s;
+}
+
+.person-card__text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.person-card__bread-text {
+  width: 100%;
+  max-width: 400px;
+}
+
+.person-card__more-button {
+  background-color: $forange;
+  border: none;
+  color: white;
+  margin-top: 50px;
+  width: 150px;
+  height: 50px;
+  border-radius: 5rem;
+  font-size: 1rem;
+  box-shadow: 5px 5px 10px #00000025;
+  z-index: 10;
+}
+
+.orange-text {
+  color: $forange;
+}
+
+.hide-person {
+  transition: 1s;
+  margin-left: -110vw;
+}
+
+@media (min-width: 1023px) {
+  .person-content__exit-person-button {
+    font-size: 2rem;
+  }
+
+  .person-card__header {
+    margin: 50px 0;
+  }
+
+  .person-card__more-button {
+    margin: 50px 0;
+  }
+}

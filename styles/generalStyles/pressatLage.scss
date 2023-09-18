@@ -1,0 +1,286 @@
+.main-header__hero-img.pressat__intro-img {
+  width: 50%;
+  min-width: 280px;
+  object-fit: contain;
+}
+
+.main-p.pressat__header-paragraph {
+  text-align: left;
+}
+
+.pressat__h2 {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.pressat__grid {
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.pressat__text-box {
+  order: 1;
+}
+
+.pressat-img__container {
+  min-height: 250px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  margin: 50px auto;
+}
+
+.pressat__grid:nth-child(odd) > .pressat-img__container {
+  order: 2;
+}
+
+.pressat-img__container--double-height {
+  min-height: 400px;
+}
+
+.pressat__img {
+  position: absolute;
+  object-fit: cover;
+  border-radius: .25rem;
+  filter: drop-shadow(0px 10px 10px #00000015);
+}
+
+.pressat__img.img1 {
+  height: 45%;
+  top: 2.5%;
+  left: 0%;
+}
+
+.pressat__img.img2 {
+  height: 45%;
+  bottom: 2.5%;
+  right: 0;
+}
+
+.pressat__img.img1--half-height {
+  height: 26%;
+  top: 12%;
+  right: 5%;
+}
+
+.pressat__img.img2--half-height {
+  height: 26%;
+  top: 25%;
+  left: 0;
+}
+
+.pressat__img.img3--half-height {
+  height: 26%;
+  bottom: 25%;
+  right: 0%;
+}
+
+.pressat__img.img4--half-height {
+  height: 26%;
+  bottom: 12%;
+  left: 5%;
+}
+
+.pressat__img.img--single {
+  width: 100%;
+  position: relative;
+}
+
+.img--tall {
+  height: 70%;
+}
+
+.pressat__shirt {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.pressat__img.shirt {
+  max-width: 400px;
+  align-self: center;
+  position: relative;
+  width: 50%;
+  filter: none;
+}
+
+.cafe__carousel-container {
+  margin-top: 50px;
+}
+
+.pressat__link {
+  color: $forange;
+}
+
+.bookCover {
+  align-self: center;
+  object-fit: contain;
+}
+
+.info-box {
+  box-shadow: 0 0 5px #0000001a;
+  border-radius: .75rem;
+  padding: 50px;
+}
+
+.info-box__links-container {
+  text-align: left;
+  order: 1;
+  grid-area: c;
+}
+
+.main-h2.info-box__h2 {
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  grid-area: a;
+}
+
+.info-box__h4 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.info-box__img {
+  margin-top: 50px;
+  width: 100%;
+  position: relative;
+  grid-area: b;
+}
+
+.carousel-root {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-slider {
+  width: 50%;
+  border-radius: 5px;
+}
+
+.carousel-slider img {
+  max-height: 90vh;
+  object-fit: cover;
+}
+
+.carousel .slide {
+  background: transparent !important;
+}
+
+.thumbs-wrapper {
+  display: none !important;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+  background: none !important;
+}
+
+.carousel .control-dots .dot.selected, .carousel .control-dots .dot:focus {
+  outline: none !important;
+}
+
+.cafe__container {
+  margin: 50px 0;
+}
+
+.fackforbund__footer {
+  margin-top: 50px;
+}
+
+.fackforbund__container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  object-fit: contain;
+  width: 80%;
+  max-height: 140px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.fackforbund__img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  width: 50%;
+  margin: 0 30px;
+  text-align: left;
+}
+
+.fackforbund__img {
+  position: relative;
+  max-width: 100%;
+  margin: 30px auto;
+  filter: none;
+}
+
+
+@media (min-width: 375px) {
+  .main-h2.info-box__h2 {
+    font-size: 1.7rem;
+  }
+
+  .pressat-img__container {
+    min-height: 300px;
+  }
+
+  .pressat-img__container--double-height {
+    min-height: 460px;
+  }
+}
+
+
+@media (min-width: 460px) {
+  .pressat__img.img1--half-height {
+    height: 30%;
+  }
+
+  .pressat__img.img2--half-height {
+    height: 30%;
+  }
+
+  .pressat__img.img3--half-height {
+    height: 30%;
+  }
+  
+  .pressat__img.img4--half-height {
+    height: 30%;
+  }
+}
+
+@media (min-width: 767px) {
+  .pressat__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 50px;
+    margin: 100px 0;
+  }
+
+  .info-box {
+    display: grid;
+    grid-template-areas: "a a"
+                        "b c";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+  }
+
+  .pressat-img__container--double-height {
+    min-height: 450px;
+    width: 400px;
+  }
+
+  .info-box__img {
+    margin-top: 0;
+  }
+
+  .main-p.grid__p {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1023px) {
+
+}
