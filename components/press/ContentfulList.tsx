@@ -1,10 +1,10 @@
-import React from "react"
-import ArticleImg from "./ArticleImg"
-import ArticleLink from "./ArticleLink"
+import React from 'react'
+import ArticleImg from './ArticleImg'
+import ArticleLink from './ArticleLink'
 
 const ContentfulList = ({ showArticleList, header, data }) => {
   const limitTitle = title => {
-    let newTitle = ""
+    let newTitle = ''
     if (title.length > 70) {
       newTitle = `${title.slice(0, 65)}...`
     } else {
@@ -17,7 +17,7 @@ const ContentfulList = ({ showArticleList, header, data }) => {
     <ul
       className="press__contentful-ul"
       style={
-        showArticleList === header ? { display: "flex" } : { display: "none" }
+        showArticleList === header ? { display: 'flex' } : { display: 'none' }
       }
     >
       <h1 className="main-header__h1 press__header__h1">{header}</h1>

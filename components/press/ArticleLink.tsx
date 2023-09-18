@@ -1,7 +1,12 @@
-import React from 'react'
 import Link from 'next/link'
 
-const ArticleLink = ({ post, header, children }) => {
+type Props = {
+  post
+  header
+  children
+}
+
+const ArticleLink = ({ post, header, children }: Props) => {
   const link = header === 'Publicerat' ? post.url : `/${post.slug}`
 
   return (
@@ -11,7 +16,7 @@ const ArticleLink = ({ post, header, children }) => {
           {children}
         </a>
       ) : (
-        <Link to={link} className="press__contentful-link">
+        <Link href={link} className="press__contentful-link">
           {children}
         </Link>
       )}

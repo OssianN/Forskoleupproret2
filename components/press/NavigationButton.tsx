@@ -1,5 +1,3 @@
-import React from "react"
-
 const NavigationButton = ({
   title,
   handleArticleListPick,
@@ -11,8 +9,8 @@ const NavigationButton = ({
       onClick={handleArticleListPick}
       style={
         showArticleList === title
-          ? { color: "#ff9f50", pointerEvents: "none" }
-          : { color: "black", cursor: "pointer" }
+          ? { color: '#ff9f50', pointerEvents: 'none' }
+          : { color: 'black', cursor: 'pointer' }
       }
     >
       {title}

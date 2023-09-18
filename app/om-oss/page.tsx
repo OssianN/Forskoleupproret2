@@ -12,8 +12,10 @@ const OmOss = () => {
   const [selectedPerson, setSelectedPerson] = useState('Anki Jansson')
   const [showPerson, setShowPerson] = useState('hide-person')
 
-  const handlePersonChange = (e: { target: HTMLButtonElement }) => {
-    const { name } = e.target
+  const handlePersonChange = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    const { name } = e.target as HTMLButtonElement
     setSelectedPerson(name)
   }
 

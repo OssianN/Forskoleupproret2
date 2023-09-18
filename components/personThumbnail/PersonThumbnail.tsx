@@ -1,6 +1,15 @@
 import Image from 'next/image'
 
-const PersonThumbnail = ({ name, active, handlePersonChange, img }) => {
+type Props = {
+  name: string
+  active: boolean
+  handlePersonChange: (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => void
+  img: string
+}
+
+const PersonThumbnail = ({ name, active, handlePersonChange, img }: Props) => {
   return (
     <button
       className={`person-thumbnails__button`}

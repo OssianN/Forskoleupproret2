@@ -8,9 +8,14 @@ import annette from './annette.json'
 import monica from './monica.json'
 import annica from './annica.json'
 import './personPresentation.scss'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
-const PersonCard = ({ personName, setShowPerson }) => {
+type Props = {
+  personName: string
+  setShowPerson: (className: string) => void
+}
+
+const PersonCard = ({ personName, setShowPerson }: Props) => {
   const [personImg, setPersonImg] = useState<StaticImageData>()
   const [personText, setPersonText] = useState<string[]>()
 
@@ -57,7 +62,7 @@ const PersonCard = ({ personName, setShowPerson }) => {
         <h2 className="main-h2 person-card__person-name">{personName}</h2>
         <Image
           className="person-card__person-img"
-          src={personImg}
+          src={personImg ?? ''}
           alt={personName}
         ></Image>
       </div>

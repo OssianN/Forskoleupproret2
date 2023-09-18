@@ -1,29 +1,29 @@
-import React, { useEffect } from "react"
-import { animateScroll } from "react-scroll"
-import NavigationButton from "./NavigationButton"
+import { useEffect } from 'react'
+import { animateScroll } from 'react-scroll'
+import NavigationButton from './NavigationButton'
 
 const CategoryNavigation = ({ handleArticleListPick, showArticleList }) => {
   const setScroll = () => {
-    const position = window.localStorage.getItem("scrollPosition")
+    const position = Number(window.localStorage.getItem('scrollPosition'))
     animateScroll.scrollTo(position)
   }
 
   useEffect(() => {
-    if (typeof window === "undefined") {
+    if (typeof window === 'undefined') {
       return
     }
 
     setScroll()
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
       if (window.scrollY < 10) {
         return
       }
 
-      window.localStorage.setItem("scrollPosition", window.scrollY)
+      window.localStorage.setItem('scrollPosition', String(window.scrollY))
     })
 
-    return () => window.removeEventListener("scroll", () => {})
+    return () => window.removeEventListener('scroll', () => {})
   }, [])
 
   return (

@@ -12,7 +12,7 @@ import Image, { StaticImageData } from 'next/image'
 type Props = {
   personName: string
   setShowPerson: (className: string) => void
-  showPerson: boolean
+  showPerson: string
 }
 
 const Person = ({ personName, setShowPerson, showPerson }: Props) => {
