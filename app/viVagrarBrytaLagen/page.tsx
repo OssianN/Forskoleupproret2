@@ -5,9 +5,17 @@ const HashTags = () => {
     <>
       <div className="viVagrarBrytaLagen">
         <header className="main-header laws">
-          <h1 className="main-h1">Vi</h1>
-          <h1 className="main-h1">vägrar bryta</h1>
-          <h1 className="main-header__h1 laws">LAGEN</h1>
+          <h1>
+            <span className="main-h1" style={{ display: 'block' }}>
+              Vi
+            </span>
+            <span className="main-h1" style={{ display: 'block' }}>
+              vägrar bryta
+            </span>
+            <span className="main-header__h1 laws" style={{ display: 'block' }}>
+              LAGEN
+            </span>
+          </h1>
           <p className="main-p">#vivägrarbrytalagen</p>
         </header>
         <div className="gridView">

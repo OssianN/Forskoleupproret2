@@ -20,7 +20,7 @@ const ContentfulList = ({ showArticleList, header, data }) => {
         showArticleList === header ? { display: 'flex' } : { display: 'none' }
       }
     >
-      <h1 className="main-header__h1 press__header__h1">{header}</h1>
+      <h2 className="main-header__h1 press__header__h1">{header}</h2>
       {data?.map(post => {
         const img = post.contentImage
         return (

@@ -60,7 +60,7 @@ const NavBar = () => {
             </li>
             <li className="nav__list-item">
               <Link className="nav__link" href="/goalDemand">
-                Mål & Krav
+                Mål & krav
               </Link>
             </li>
             <li className="nav__list-item">
