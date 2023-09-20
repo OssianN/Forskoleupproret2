@@ -1,3 +1,8 @@
+.orange-text-parent b {
+  color: $forange;
+  font-weight: 700;
+}
+
 .orangeText {
   color: $forange;
   font-weight: 700;
@@ -14,11 +19,11 @@
   padding: 30px;
   margin: 50px 0;
   font-weight: 400;
-  font-size: .9rem;
+  font-size: 0.9rem;
   width: calc(100% - 60px);
   transform: scale(1);
   text-align: center;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
 }
 
 .goal-demand__link {
@@ -26,8 +31,12 @@
   margin-top: 50px;
 }
 
+.goal-demand__link a {
+  color: $forange;
+}
+
 .goal-demand__img {
-  margin-bottom: 50px;
+  padding-block: 50px;
 }
 
 .main-header.section2 {
@@ -47,7 +56,7 @@
 }
 
 .demand__list li::before {
-  content: "\2022";
+  content: '\2022';
   color: $forange;
   font-weight: bold;
   display: inline-block;
