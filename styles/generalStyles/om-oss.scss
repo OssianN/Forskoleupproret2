@@ -28,8 +28,8 @@ $forange: #ff9f50;
 }
 
 .person-thumbnails__img {
-  position: relative;
   width: 80px;
+  height: 80px;
   object-fit: contain;
   border-radius: 50%;
   pointer-events: none;
@@ -50,7 +50,8 @@ $forange: #ff9f50;
 
 @media (min-width: 400px) {
   .person-thumbnails__img {
-    width: 100px;
+    width: 130px;
+    height: 130px;
   }
 
   .person-thumbnails__button {
@@ -62,7 +63,6 @@ $forange: #ff9f50;
     height: 110px;
   }
 }
-
 
 @media (min-width: 1023px) {
   .person-thumbnails__container {

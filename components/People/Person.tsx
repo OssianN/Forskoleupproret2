@@ -1,11 +1,5 @@
 'use client'
 import { useState, useEffect } from 'react'
-import anki from './anki.json'
-import katrin from './katrin.json'
-import diana from './diana.json'
-import annette from './annette.json'
-import monica from './monica.json'
-import annica from './annica.json'
 import * as img from '@/images'
 import Image, { StaticImageData } from 'next/image'
 
@@ -18,21 +12,6 @@ type Props = {
 const Person = ({ personName, setShowPerson, showPerson }: Props) => {
   const [personImg, setPersonImg] = useState<StaticImageData>()
   const [personText, setPersonText] = useState<string[]>()
-
-  const renderPersonParagraphs = (data: string[] | undefined) =>
-    data?.map((paragraph, i) => {
-      if (i === 0)
-        return (
-          <p key={i} className="person-content__bread-text main-p orange-text">
-            {paragraph}
-          </p>
-        )
-      return (
-        <p key={i} className="person-content__bread-text main-p">
-          {paragraph}
-        </p>
-      )
-    })
 
   useEffect(() => {
     switch (personName) {
@@ -101,7 +80,7 @@ const Person = ({ personName, setShowPerson, showPerson }: Props) => {
           ) : (
             ''
           )}
-          {renderPersonParagraphs(personText)}
+          {personText}
         </div>
       </div>
     </div>
