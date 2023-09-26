@@ -1,90 +1,100 @@
 'use client'
-import { useState, useEffect } from 'react'
-import * as img from '@/images'
-import Image, { StaticImageData } from 'next/image'
+import type { ImageType } from '@/types'
+import {
+  type ReactNode,
+  useState,
+  CSSProperties,
+  useRef,
+  useEffect,
+} from 'react'
+import PersonThumbnail from './PersonThumbnail'
 
 type Props = {
-  personName: string
-  setShowPerson: (className: string) => void
-  showPerson: string
+  name: string
+  description: ReactNode
+  image: ImageType
+  order: number
 }
 
-const Person = ({ personName, setShowPerson, showPerson }: Props) => {
-  const [personImg, setPersonImg] = useState<StaticImageData>()
-  const [personText, setPersonText] = useState<string[]>()
+export const Person = ({ name, description, image, order }: Props) => {
+  const [selected, setSelected] = useState<boolean>(false)
+  const [hideArrow, setHideArrow] = useState<boolean>(false)
+  const translateX: Record<number, string> = {
+    0: '24vw',
+    1: '0',
+    2: '-24vw',
+  }
+  const translateXLarge: Record<number, string> = {
+    0: '380px',
+    1: '0',
+    2: '-380px',
+  }
 
   useEffect(() => {
-    switch (personName) {
-      case 'Anki Jansson':
-        setPersonImg(img.anki)
-        setPersonText(anki.paragraphs)
-        break
-      case 'Katrin Nörthen':
-        setPersonImg(img.katrin)
-        setPersonText(katrin.paragraphs)
-        break
-      case 'Diana Hall':
-        setPersonImg(img.diana)
-        setPersonText(diana.paragraphs)
-        break
-      case 'Annette Nord':
-        setPersonImg(img.annette)
-        setPersonText(annette.paragraphs)
-        break
-      case 'Monica Lindström':
-        setPersonImg(img.monica)
-        setPersonText(monica.paragraphs)
-        break
-      case 'Annica Järking':
-        setPersonImg(img.annica)
-        setPersonText(annica.paragraphs)
-        break
-      default:
-        break
-    }
-  }, [personName])
-
-  const handleHidePerson = () => setShowPerson('hide-person')
+    !selected && setHideArrow(false)
+  }, [selected, setHideArrow])
 
   return (
-    <div className={`person-content__wrapper ${showPerson}`}>
-      <div className="person-content__container">
-        <button
-          className="person-content__exit-person-button"
-          onClick={handleHidePerson}
+    <div
+      className="person__container"
+      onMouseOver={() => setSelected(true)}
+      onMouseOut={() => setSelected(false)}
+      onClick={() => setSelected(true)}
+      style={{
+        zIndex: selected ? 200 : 0,
+      }}
+    >
+      <PersonThumbnail name={name} image={image} />
+
+      <div
+        className="person-content__container"
+        style={
+          {
+            display: selected ? 'flex' : 'none',
+            '--person-details-translate-x': translateX[order % 3],
+            '--person-details-translate-x-lg': translateXLarge[order % 3],
+          } as CSSProperties
+        }
+      >
+        <div
+          className="person-content__wrapper"
+          onScroll={() => setHideArrow(true)}
         >
-          &#10005;
-        </button>
-        <Image
-          className="person-content__img"
-          src={personImg ?? ''}
-          alt={personName}
-        ></Image>
-        <h2 className="main-h2 person-content__name-h2">{personName}</h2>
-        <div className="person-content__bread-text">
-          {personName === 'Anki Jansson' ? (
-            <div className="person-content__anki-details">
-              <p className="person-content__bread-text main-p">
-                <b>Kontakt:</b>
-                <br />
-                mailadress under arbete.
-                <br />
-                <br />
-                <b>Ansvarar för:</b>
-                <br />
-                Förskoleupprorets talesperson.
-                <br />
-                Administrerar vår Facebookgrupp samt vår Facebook-sida.
-              </p>
-            </div>
-          ) : (
-            ''
-          )}
-          {personText}
+          <button
+            className="person-content__button--close"
+            onClick={() => setSelected(false)}
+          >
+            &#x2717;
+          </button>
+          <h2 className="main-h2 person-content__name-h2">{name}</h2>
+          <div className="person-content__bread-text main-p">{description}</div>
+        </div>
+        <div
+          className="person-content__arrow-down"
+          style={{ display: hideArrow ? 'none' : 'block' }}
+        >
+          &#709;
         </div>
       </div>
     </div>
   )
 }
 
-export default Person
+// {personName === 'Anki Jansson' ? (
+//   <div className="person-content__anki-details">
+//     <p className="person-content__bread-text main-p">
+//       <b>Kontakt:</b>
+//       <br />
+//       mailadress under arbete.
+//       <br />
+//       <br />
+//       <b>Ansvarar för:</b>
+//       <br />
+//       Förskoleupprorets talesperson.
+//       <br />
+//       Administrerar vår Facebookgrupp samt vår Facebook-sida.
+//     </p>
+//   </div>
+// ) : (
+//   ''
+// )}

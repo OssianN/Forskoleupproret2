@@ -20,7 +20,7 @@ import press from './press.svg'
 
 import insta from './insta.png'
 import facebook from './fb.png'
-import twitter from './twitter.png'
+import xLogo from './xLogo.png'
 import linkedin from './linkedin.png'
 import at from './at.png'
 import youtube from './youtube.png'
@@ -51,7 +51,7 @@ import shirt from '@/images/shirt.jpg'
 import sharingArticle from '@/images/sharingArticle.svg'
 import newspaper from '@/images/newspaper.svg'
 import lararforbundet from '@/images/lararforbundet.png'
-import kommunal from '@/images/kommunal.jpeg'
+import kommunal from '@/images/kommunal.svg'
 import bookCover from '@/images/bookCover.jpeg'
 
 export {
@@ -72,7 +72,7 @@ export {
   press,
   insta,
   facebook,
-  twitter,
+  xLogo,
   linkedin,
   at,
   youtube,

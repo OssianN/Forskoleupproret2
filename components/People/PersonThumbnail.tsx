@@ -1,29 +1,22 @@
+import { ImageType } from '@/types'
 import Image from 'next/image'
+import type { Dispatch, SetStateAction } from 'react'
 
 type Props = {
   name: string
-  active: boolean
-  handlePersonChange: (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => void
-  img: string
+  image: ImageType
 }
 
-const PersonThumbnail = ({ name, active, handlePersonChange, img }: Props) => {
+const PersonThumbnail = ({ name, image }: Props) => {
   return (
-    <button
-      className={`person-thumbnails__button`}
-      name={name}
-      onClick={e => handlePersonChange(e)}
-    >
-      <Image className="person-thumbnails__img" src={img} alt={name}></Image>
-      <h4
-        className={`person-thumbnails__name-h4 ${
-          active && 'person-thumbnails__h4--active'
-        }`}
-      >
-        {name}
-      </h4>
+    <button className="person-thumbnails__button" name={name}>
+      <Image
+        className="person-thumbnails__img"
+        src={`https:${image.fields?.file.url}`}
+        {...image.fields?.file.details.image}
+        alt={name}
+      />
+      <p className="person-thumbnails__name">{name.split(' ')[0]}</p>
     </button>
   )
 }
