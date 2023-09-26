@@ -1,0 +1,9 @@
+$forange: #ff9f50;
+$tabContentBackground: #f7f7f7;
+
+@mixin main-p {
+  line-height: 1.7rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #757575;
+}

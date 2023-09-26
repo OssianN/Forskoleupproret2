@@ -1,7 +1,4 @@
-@import 'generalStyles/general.scss', 'reset.css';
-
-$forange: #ff9f50;
-$tabContentBackground: #f7f7f7;
+@import 'generalStyles/general.scss', 'reset.css', 'variables.scss';
 
 .main-header {
   position: relative;
@@ -35,10 +32,7 @@ $tabContentBackground: #f7f7f7;
 }
 
 .main-p {
-  line-height: 1.7rem;
-  max-width: 600px;
-  margin: 0 auto;
-  color: #4c4c4c;
+  @include main-p;
 }
 
 .main-header__intro-paragraph {

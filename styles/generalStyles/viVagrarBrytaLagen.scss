@@ -1,61 +1,32 @@
-$forange: #ff9f50;
+@import '../variables.scss';
 
-.omHashtagen {
-  display: flex;
-  flex-direction: column;
-  min-height: 85%;
-  text-align: center;
-  background-color: white;
-  padding-left: 7%;
-  padding-right: 7%;
+@mixin main-h2 {
+  color: #3d3d3d;
+  font-size: 1.7rem;
+  max-width: 600px;
+  margin: 2rem auto 1rem;
 }
 
 .main-header.laws {
   margin-bottom: 50px;
 }
 
-.main-header__h1.laws {
-  margin-bottom: 10px;
+.vi-vagrar-bryta-lagen__h1--big.main-header__h1 {
+  margin-bottom: 0.5rem;
   font-size: 3.5rem;
   line-height: 3rem;
 }
 
-.main-h2.laws__h2 {
-  max-width: 600px;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 10px;
+.vi-vagrar-bryta-lagen__intro-paragraph h2 {
+  @include main-h2;
 }
 
-.laws__link {
+.vi-vagrar-bryta-lagen__intro-paragraph p {
+  @include main-p;
+}
+
+.vi-vagrar-bryta-lagen__intro-paragraph a {
   color: $forange;
-}
-
-.laws__grid-header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
-  margin-top: 100px;
-}
-
-.laws__section-span {
-  width: 40%;
-  min-width: 200px;
-  height: 3px;
-  background-color: $forange;
-  margin-top: 30px;
-}
-
-.laws__blob {
-  position: absolute;
-  height: 500px;
-}
-
-.laws__h1 {
-  margin-bottom: 10px;
 }
 
 .vittnesmal__container {
@@ -67,15 +38,6 @@ $forange: #ff9f50;
   margin-bottom: 50px;
   border-radius: 0.75rem;
   max-width: 600px;
-}
-
-.main-h2.vittnesmal__h2 {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.vittnesmal__p.main-p {
-  margin-bottom: 30px;
 }
 
 .vittnesmal__img {
@@ -93,12 +55,59 @@ $forange: #ff9f50;
   text-align: center;
   background-color: white;
   height: 300px;
-  padding: 30px;
+  padding: 2rem;
   z-index: 10;
 }
 
-.vittnesmal__link {
+.vittnesmal__textbox h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #3d3d3d;
+  font-size: 1.7rem;
+  max-width: 600px;
+}
+
+.vittnesmal__textbox a {
+  display: block;
+  color: $forange;
+  margin-top: 2rem;
   line-height: 1.7rem;
+}
+
+.law__container {
+  margin: 4rem 0;
+}
+
+.law__title {
+  width: 100%;
+  text-align: center;
+  @include main-h2();
+}
+
+.law__subTitle {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.law__section-span {
+  display: block;
+  width: 40%;
+  min-width: 200px;
+  height: 3px;
+  background-color: #ff9f50;
+  margin: 0 auto;
+  margin: 2rem auto;
+}
+
+.law__body a {
+  display: block;
+  margin-top: 1rem;
+  color: $forange;
+}
+
+.law__body p {
+  @include main-p;
 }
 
 @media (min-width: 375px) {
@@ -120,5 +129,11 @@ $forange: #ff9f50;
   .vittnesmal__img {
     height: 150%;
     margin-top: -390px;
+  }
+}
+
+@media (min-width: 767px) {
+  .law__container {
+    margin: 10rem 0;
   }
 }
