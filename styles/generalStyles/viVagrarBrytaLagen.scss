@@ -1,3 +1,5 @@
+$forange: #ff9f50;
+
 .omHashtagen {
   display: flex;
   flex-direction: column;
@@ -54,18 +56,6 @@
 
 .laws__h1 {
   margin-bottom: 10px;
-}
-
-.laws__blob--rotate90 {
-  transform: rotate(90deg);
-}
-
-.laws__blob--rotate125 {
-  transform: rotate(125deg);
-}
-
-.laws__blob--rotate300 {
-  transform: rotate(300deg);
 }
 
 .vittnesmal__container {

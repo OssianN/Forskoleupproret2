@@ -22,7 +22,7 @@ a {
 .main-layout {
   max-width: 1200px;
   min-height: 100vh;
-  padding: 0 30px;
-  padding-bottom: 100px;
+  padding: 0 2rem;
+  padding-bottom: 2rem;
   margin: 0 auto;
 }

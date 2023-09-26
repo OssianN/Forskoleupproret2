@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import './nav-bar.scss'
-// import pinIcon from '@/images/pinIcon.png'
+import pinIcon from '@/images/pinIcon.png'
 
 const NavBar = () => {
   const [showMobileNav, setShowMobileNav] = useState('-400px')
@@ -43,8 +43,8 @@ const NavBar = () => {
         </button>
         <div className="nav__mobile-top-span">
           {/* <Link href="/" className="nav__mobile-home-button">
-          <Image src={pinIcon} alt="icon" className="nav__icon"></Image>
-        </Link> */}
+            Hem
+          </Link> */}
         </div>
         <nav className="nav__container" style={{ marginRight: showMobileNav }}>
           <ul className="nav__ul">
@@ -54,9 +54,9 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="nav__list-item nav__home-link">
-              {/* <Link className="nav__link" href="/">
-              <Image src={pinIcon} alt="icon" className="nav__icon" />
-            </Link> */}
+              <Link className="nav__link" href="/">
+                Hem
+              </Link>
             </li>
             <li className="nav__list-item">
               <Link className="nav__link" href="/goalDemand">

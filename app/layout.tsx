@@ -1,9 +1,10 @@
 import NavBar from '@/components/nav-bar/NavBar'
 import { Montserrat } from 'next/font/google'
+import type { Metadata } from 'next'
+import Contact from '@/components/contact/Contact'
+const montserratScript = Montserrat({ subsets: ['latin'] })
 import './globals.css'
 import '@/styles/index.scss'
-import type { Metadata } from 'next'
-const montserratScript = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Förskoleupproret',
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={montserratScript.className}>
         <NavBar />
         <main className="main-layout">{children}</main>
+        <Contact />
       </body>
     </html>
   )

@@ -1,9 +1,3 @@
-.history__iframe {
-  align-self: center;
-  width: 90vmin;
-  height: 51vmin;
-}
-
 .history__ankis-title {
   margin: 0 auto;
   margin-bottom: 50px;
@@ -11,8 +5,12 @@
 }
 
 .history__ankis-paragraph {
+  display: flex;
+  flex-direction: column;
   margin-top: 50px;
-  color: #757575;
+  gap: 2rem;
+  line-height: 1.7rem;
+  color: #4c4c4c;
 }
 
 @media (min-width: 1023px) {
