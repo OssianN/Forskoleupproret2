@@ -1,5 +1,5 @@
-$forange: #ff9f50;
-$tabContentBackground: white;
+@import '../../styles/variables.scss';
+$linkColor: #3d3d3d;
 
 .nav__container {
   position: fixed;
@@ -12,6 +12,7 @@ $tabContentBackground: white;
   transition: 0.5s;
   z-index: 100;
   overflow-y: scroll;
+  transform: translateX(var(--mobile-nav-offset));
 }
 
 .nav__mobile-toggle-button {
@@ -39,26 +40,58 @@ $tabContentBackground: white;
   padding-left: 50px;
   padding-top: 20%;
   padding-bottom: 50px;
+  gap: 2rem;
 }
 
-.nav__list-item {
+.nav__item {
   display: flex;
-  align-items: center;
   list-style: none;
-  max-height: 40px;
-  margin-top: 40px;
+  height: fit-content;
+  padding: 1rem;
+  color: $linkColor;
+}
+
+.nav__item--multiple-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.25rem 0.25rem 0 0;
+  cursor: pointer;
+
+  &:hover {
+    color: $forange;
+  }
+}
+
+.nav__item--multiple-arrow {
+  display: inline-block;
+  transform: rotateZ(90deg) scale(1.4);
+  margin-left: 0.5rem;
+}
+
+.nav__item-list {
+  --nav-item-list-hidden: visible;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0.5rem;
 }
 
 .nav__link {
-  color: #3d3d3d;
-  text-decoration: none;
   font-size: 1rem;
-  font-weight: 400;
-  word-wrap: wrap;
+  font-weight: 500;
+}
+
+.nav__item--multiple-title {
+  font-weight: 500;
+}
+
+.nav__item-list .nav__link {
+  color: $linkColor;
 }
 
 .nav__link:hover {
-  color: #ff9f50;
+  color: $forange;
 }
 
 .nav__icon {
@@ -70,8 +103,14 @@ $tabContentBackground: white;
   opacity: 0.9;
 }
 
-.nav__home-link {
-  display: none;
+.nav__home-image {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  object-fit: contain;
+  border: 1px solid #f5822400;
+  margin: 0 auto;
 }
 
 .nav__mobile-top-span {
@@ -89,13 +128,11 @@ $tabContentBackground: white;
 }
 
 .active-tab {
-  color: #ff9f50;
+  color: $forange;
 }
 
 @media (min-width: 1023px) {
   .nav__mobile-toggle-button,
-  .nav__mobile-home-button,
-  .nav__mobile-home-link,
   .nav__mobile-top-span {
     display: none;
   }
@@ -114,7 +151,8 @@ $tabContentBackground: white;
     justify-content: center;
     align-items: center;
     padding: 40px 0;
-    overflow-y: hidden;
+    overflow-y: unset;
+    transform: none;
   }
 
   .nav__ul {
@@ -128,25 +166,25 @@ $tabContentBackground: white;
     align-items: center;
   }
 
-  .nav__list-item {
+  .nav__item {
+    align-items: center;
     max-height: none;
     margin-top: 0;
   }
 
-  .nav__link {
-    font-size: 1em;
+  .nav__item-list {
+    --nav-item-list-hidden: hidden;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0.25rem;
+    background: $forange;
+    transform: translateY(calc(100%));
   }
 
-  .nav__home-link {
-    display: block;
-  }
-
-  .nav__home-link img {
-    height: 3rem;
-    width: 3rem;
-    border-radius: 50%;
-    object-fit: contain;
-    border: 1px solid #f5822400;
+  .nav__item-list .nav__link {
+    &:hover {
+      color: white;
+    }
   }
 }
 
