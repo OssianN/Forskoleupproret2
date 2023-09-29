@@ -5,7 +5,7 @@ import { getImage } from '@/utils'
 import { PeopleList } from '@/components/people/PeopleList'
 import ReactMarkdown from 'react-markdown'
 
-type AboutUsEntrySkeleton = {
+type AboutUsEntry = {
   contentTypeId: 'aboutUsPage'
   fields: {
     title: EntryFieldTypes.Text
@@ -14,13 +14,13 @@ type AboutUsEntrySkeleton = {
   }
 }
 
-const OmOss = async () => {
+const AboutUs = async () => {
   const { title, introImage, paragraph } = (
-    await client.getEntry<AboutUsEntrySkeleton>('3rE8XlMRfsFABpmMlmMh2B')
+    await client.getEntry<AboutUsEntry>('3rE8XlMRfsFABpmMlmMh2B')
   ).fields
 
   return (
-    <div className="om-oss__container">
+    <div className="about-us__container">
       <header className="main-header">
         <h1 className="main-header__h1">{title}</h1>
         <Image
@@ -39,4 +39,4 @@ const OmOss = async () => {
   )
 }
 
-export default OmOss
+export default AboutUs

@@ -18,9 +18,9 @@ const History = async () => {
 
   return (
     <div className="history__container">
-      <div className="main-header">
+      <header className="main-header">
         <h1 className="main-header__h1">{title}</h1>
-      </div>
+      </header>
       <h2 className="main-h2 history__ankis-title">{subTitle}</h2>
       <div className="history__ankis-paragraph grid-view">
         {documentToReactComponents(body)}

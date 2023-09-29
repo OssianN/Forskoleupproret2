@@ -3,7 +3,7 @@ import { Montserrat } from 'next/font/google'
 import type { Metadata } from 'next'
 import Contact from '@/components/contact/Contact'
 const montserratScript = Montserrat({ subsets: ['latin'] })
-import './globals.css'
+import './globals.scss'
 import '@/styles/index.scss'
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="se">
       <body className={montserratScript.className}>
         <NavBar />
-        <main className="main-layout">{children}</main>
+        <main>{children}</main>
         <Contact />
       </body>
     </html>

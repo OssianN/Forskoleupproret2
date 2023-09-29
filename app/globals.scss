@@ -1,6 +1,4 @@
-:root {
-  --max-width: 1200px;
-}
+@import '../styles/variables.scss';
 
 * {
   box-sizing: border-box;
@@ -20,9 +18,10 @@ a {
 }
 
 .main-layout {
-  max-width: var(--max-width);
+  max-width: $maxWidth;
   min-height: 100vh;
   padding: 0 2rem;
   padding-bottom: 2rem;
   margin: 0 auto;
+  margin-top: 7rem;
 }

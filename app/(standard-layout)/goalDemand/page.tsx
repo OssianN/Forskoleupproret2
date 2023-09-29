@@ -40,7 +40,7 @@ export const OmOss = async () => {
 
   return (
     <div className="goal-demand__container">
-      <section className=" main-header section1">
+      <header className=" main-header section1">
         <h1 className="main-header__h1">{title}</h1>
 
         <Image className="main-header__hero-img" src={goalImage} alt="demand" />
@@ -48,7 +48,7 @@ export const OmOss = async () => {
         <div className="main-header__intro-paragraph main-p orange-text-parent">
           {documentToReactComponents(paragraph)}
         </div>
-      </section>
+      </header>
 
       <div className="goal-demand__link">
         {documentToReactComponents(link1)}
