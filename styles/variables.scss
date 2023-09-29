@@ -1,9 +1,15 @@
 $forange: #ff9f50;
 $tabContentBackground: #f7f7f7;
+$maxWidth: 1200px;
 
 @mixin main-p {
   line-height: 1.7rem;
   max-width: 600px;
   margin: 0 auto;
   color: #757575;
+}
+
+@mixin main-h2 {
+  color: #3d3d3d;
+  font-size: 1.7rem;
 }

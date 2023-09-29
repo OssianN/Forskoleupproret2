@@ -2,7 +2,6 @@
 
 .main-header {
   position: relative;
-  margin-top: 100px;
   width: 100%;
   text-align: center;
   display: flex;
@@ -14,7 +13,7 @@
   font-weight: 900;
   font-size: 1.7rem;
   line-height: 1.7rem;
-  margin-bottom: 50px;
+  margin-bottom: 1rem;
   max-width: 600px;
   color: #2b2b2b;
 }
@@ -27,8 +26,7 @@
 }
 
 .main-h2 {
-  color: #3d3d3d;
-  font-size: 1.7rem;
+  @include main-h2;
 }
 
 .main-p {
@@ -45,10 +43,10 @@
 .main-header__hero-img {
   position: relative;
   width: 100%;
-  height: max-content;
+  height: auto;
   margin: 0 auto;
   border-radius: 0.25rem;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 @media (min-width: 374px) {
@@ -62,6 +60,7 @@
   .main-header__h1 {
     font-size: 3.5rem;
     line-height: 3.5rem;
+    margin-bottom: 3rem;
   }
 
   .grid-view {
@@ -69,15 +68,10 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
     text-align: left;
-    padding-inline: 2rem;
   }
 }
 
 @media (min-width: 1023px) {
-  .main-header {
-    margin-top: 130px;
-  }
-
   .main-header__h1 {
     font-size: 3.5rem;
     line-height: 3.5rem;
