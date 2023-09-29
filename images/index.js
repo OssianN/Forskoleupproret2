@@ -1,7 +1,9 @@
 import aboutUs from './aboutUs.svg'
 import at from './at.png'
 import banner from './banner.png'
+import demand2 from './demand2.svg'
 import facebook from './fb.png'
+import goalImage from './goal.svg'
 import history from './history.svg'
 import insta from './insta.png'
 import linkedin from './linkedin.png'
@@ -15,7 +17,9 @@ export {
   aboutUs,
   at,
   banner,
+  demand2,
   facebook,
+  goalImage,
   history,
   insta,
   linkedin,
