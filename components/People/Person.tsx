@@ -1,7 +1,7 @@
 'use client'
 import type { ImageType } from '@/types'
 import { type ReactNode, type CSSProperties, useState, useEffect } from 'react'
-import PersonThumbnail from './PersonThumbnail'
+import { PersonThumbnail } from './PersonThumbnail'
 
 type Props = {
   name: string
@@ -72,22 +72,3 @@ export const Person = ({ name, description, image, order }: Props) => {
     </div>
   )
 }
-
-// {personName === 'Anki Jansson' ? (
-//   <div className="person-content__anki-details">
-//     <p className="person-content__bread-text main-p">
-//       <b>Kontakt:</b>
-//       <br />
-//       mailadress under arbete.
-//       <br />
-//       <br />
-//       <b>Ansvarar för:</b>
-//       <br />
-//       Förskoleupprorets talesperson.
-//       <br />
-//       Administrerar vår Facebookgrupp samt vår Facebook-sida.
-//     </p>
-//   </div>
-// ) : (
-//   ''
-// )}

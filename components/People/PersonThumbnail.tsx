@@ -8,7 +8,7 @@ type Props = {
   setSelected: Dispatch<SetStateAction<boolean>>
 }
 
-const PersonThumbnail = ({ name, image, setSelected }: Props) => {
+export const PersonThumbnail = ({ name, image, setSelected }: Props) => {
   return (
     <button
       className="person-thumbnails__button"
@@ -25,5 +25,3 @@ const PersonThumbnail = ({ name, image, setSelected }: Props) => {
     </button>
   )
 }
-
-export default PersonThumbnail
