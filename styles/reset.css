@@ -126,11 +126,6 @@ table {
   border-spacing: 0;
 }
 
-button {
-  cursor: pointer;
-  transition: 0.3s;
-}
-
 @media (hover: hover) {
   button:hover {
     transform: scale(1.05);

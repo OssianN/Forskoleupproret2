@@ -1,24 +1,13 @@
 .history__ankis-title {
   margin: 0 auto;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .history__ankis-paragraph {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
   gap: 2rem;
   line-height: 1.7rem;
   color: #4c4c4c;
-}
-
-@media (min-width: 1023px) {
-  .history__ankis-paragraph {
-    margin-top: 100px;
-  }
-
-  .history__ankis-title {
-    margin-bottom: 3rem;
-  }
 }
