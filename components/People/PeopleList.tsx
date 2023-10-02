@@ -13,7 +13,7 @@ type PersonEntry = {
   }
 }
 
-export const PeopleList = async () => {
+export const _PeopleList = async () => {
   const people = await client.getEntries<PersonEntry>({
     content_type: 'people',
   })
