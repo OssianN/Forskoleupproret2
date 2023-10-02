@@ -1,6 +1,6 @@
 import { LawList } from '@/components/LawSection/LawList'
 import { client } from '@/contentful'
-import * as img from '@/images'
+import thousand from '@/images/1000.svg'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { EntryFieldTypes } from 'contentful'
 import Image from 'next/image'
@@ -43,7 +43,7 @@ const HashTags = async () => {
       </div>
 
       <div className="vittnesmal__container">
-        <Image src={img.thousand} alt="1000" className="vittnesmal__img" />
+        <Image src={thousand} alt="1000" className="vittnesmal__img" />
         <div className="vittnesmal__textbox">
           {documentToReactComponents(introBox)}
         </div>

@@ -1,11 +1,11 @@
 'use client'
 import Link from 'next/link'
-import './nav-bar.scss'
 import MultipleLinksItem from './MultipleLinksItem'
 import MobileToggleButton from './MobileToggleButton'
 import { type CSSProperties, useState } from 'react'
 import Image from 'next/image'
 import pinIcon from '@/images/pinIcon.png'
+import './nav-bar.scss'
 
 const NavBar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false)

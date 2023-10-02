@@ -1,7 +1,5 @@
 import Image from 'next/image'
-import goalImage from '@/images/goal.svg'
-import demandImage from '@/images/demand2.svg'
-import * as images from '@/images'
+import goalDemandBanner from '@/images/goalDemandBanner.svg'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import ReactMarkdown from 'react-markdown'
 import type { EntryFieldTypes } from 'contentful'
@@ -59,7 +57,7 @@ export const OmOss = async () => {
         <div className="goal-demand__banner">
           <Image
             className="goal-demand__banner-image"
-            src={images.goalDemandBanner}
+            src={goalDemandBanner}
             alt="goal demand banner"
           />
           <h3 className="goal-demand__banner-text ">{bannerText}</h3>
