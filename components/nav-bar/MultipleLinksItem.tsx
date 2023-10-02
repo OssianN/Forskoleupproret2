@@ -3,8 +3,9 @@
 import Link from 'next/link'
 import { CSSProperties, useState } from 'react'
 
-const MultipleLinksItem = () => {
+const MultipleLinksItem = ({ path }: { path: string }) => {
   const [hashtagListOpen, setHashtagListOpen] = useState<boolean>(false)
+  console.log(path)
 
   return (
     <li
@@ -25,10 +26,20 @@ const MultipleLinksItem = () => {
           } as CSSProperties
         }
       >
-        <Link className="nav__link" href="/hashtags/pressatLage">
+        <Link
+          className={`nav__link ${
+            path === '/hashtags/pressatLage' ? 'orange-text' : ''
+          }`}
+          href="/hashtags/pressatLage"
+        >
           #pressatläge
         </Link>
-        <Link className="nav__link" href="/hashtags/viVagrarBrytaLagen">
+        <Link
+          className={`nav__link ${
+            path === '/hashtags/viVagrarBrytaLagen' ? 'orange-text' : ''
+          }`}
+          href="/hashtags/viVagrarBrytaLagen"
+        >
           #vivägrarbrytalagen
         </Link>
       </div>

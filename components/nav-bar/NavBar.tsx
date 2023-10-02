@@ -2,13 +2,19 @@
 import Link from 'next/link'
 import MultipleLinksItem from './MultipleLinksItem'
 import MobileToggleButton from './MobileToggleButton'
-import { type CSSProperties, useState } from 'react'
+import { type CSSProperties, useState, useEffect } from 'react'
 import Image from 'next/image'
 import pinIcon from '@/images/pinIcon.png'
 import './nav-bar.scss'
+import { usePathname } from 'next/navigation'
 
 const NavBar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false)
+  const path = usePathname()
+
+  useEffect(() => {
+    setShowMobileNav(false)
+  }, [path])
 
   return (
     <>
@@ -32,26 +38,46 @@ const NavBar = () => {
             </Link>
           </li>
           <li className="nav__item">
-            <Link className="nav__link" href="/goal-demand">
+            <Link
+              className={`nav__link ${
+                path === '/goal-demand' ? 'orange-text' : ''
+              }`}
+              href="/goal-demand"
+            >
               Mål & krav
             </Link>
           </li>
           <li className="nav__item">
-            <Link className="nav__link" href="/about-us">
+            <Link
+              className={`nav__link ${
+                path === '/about-us' ? 'orange-text' : ''
+              }`}
+              href="/about-us"
+            >
               Om oss
             </Link>
           </li>
           <li className="nav__item">
-            <Link className="nav__link" href="/history">
+            <Link
+              className={`nav__link ${
+                path === '/history' ? 'orange-text' : ''
+              }`}
+              href="/history"
+            >
               Bakgrund
             </Link>
           </li>
           <li className="nav__item">
-            <Link className="nav__link" href="/press/news">
+            <Link
+              className={`nav__link ${
+                path === '/press/news' ? 'orange-text' : ''
+              }`}
+              href="/press/news"
+            >
               Press
             </Link>
           </li>
-          <MultipleLinksItem />
+          <MultipleLinksItem path={path} />
         </ul>
       </nav>
     </>

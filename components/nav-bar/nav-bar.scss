@@ -48,7 +48,6 @@ $linkColor: #3d3d3d;
   list-style: none;
   height: fit-content;
   padding: 1rem;
-  color: $linkColor;
 }
 
 .nav__item--multiple-container {
@@ -57,10 +56,6 @@ $linkColor: #3d3d3d;
   flex-direction: column;
   border-radius: 0.25rem 0.25rem 0 0;
   cursor: pointer;
-
-  &:hover {
-    color: $forange;
-  }
 }
 
 .nav__item--multiple-arrow {
@@ -78,16 +73,13 @@ $linkColor: #3d3d3d;
 }
 
 .nav__link {
+  color: $linkColor;
   font-size: 1rem;
   font-weight: 500;
 }
 
 .nav__item--multiple-title {
   font-weight: 500;
-}
-
-.nav__item-list .nav__link {
-  color: $linkColor;
 }
 
 .nav__link:hover {
@@ -180,6 +172,12 @@ $linkColor: #3d3d3d;
     padding: 2rem;
     background: $forange;
     transform: translateY(calc(100%));
+  }
+
+  .nav__item--multiple-title {
+    &:hover {
+      color: $forange;
+    }
   }
 
   .nav__item-list .nav__link {
