@@ -20,21 +20,21 @@ export const PressNavigation = () => {
       <li
         style={
           {
-            color: activeSegment === 'published' ? 'var(--nav-color)' : 'black',
-          } as CSSProperties
-        }
-      >
-        <Link href="/press/published">Published</Link>
-      </li>
-      <li
-        style={
-          {
             color:
               activeSegment === 'testimonials' ? 'var(--nav-color)' : 'black',
           } as CSSProperties
         }
       >
-        <Link href="/press/testimonials">Testimonials</Link>
+        <Link href="/press/testimonials">Vittnesmål</Link>
+      </li>
+      <li
+        style={
+          {
+            color: activeSegment === 'published' ? 'var(--nav-color)' : 'black',
+          } as CSSProperties
+        }
+      >
+        <Link href="/press/published">Publicerat</Link>
       </li>
     </ul>
   )

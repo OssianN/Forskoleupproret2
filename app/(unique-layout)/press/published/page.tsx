@@ -28,7 +28,7 @@ const Published = async () => {
       <ul className="press__post-list">
         {newsList.map(({ fields: { title }, sys: { id } }) => {
           return (
-            <div className="press__post-container" key={id}>
+            <div className="press__published-container" key={id}>
               <h3 className="press__post-title">{title}</h3>
             </div>
           )

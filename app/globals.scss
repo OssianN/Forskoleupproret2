@@ -12,6 +12,10 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  font-weight: 300;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -24,8 +28,16 @@ button {
 .main-layout {
   max-width: $maxWidth;
   min-height: 100vh;
-  padding: 0 2rem;
+  padding-inline: 2rem;
   padding-bottom: 2rem;
+  padding-top: 4rem;
   margin: 0 auto;
-  margin-top: 7rem;
+}
+
+@media (min-width: 1023px) {
+  .main-layout {
+    padding-top: 7rem;
+    padding-inline: 4rem;
+    padding-bottom: 4rem;
+  }
 }
