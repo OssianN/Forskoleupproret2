@@ -19,7 +19,7 @@ type BlogPostEntry = {
   }
 }
 
-const PostTemplate = async ({
+const ArticlePage = async ({
   params: { slug },
 }: {
   params: { slug: string }
@@ -58,4 +58,4 @@ const PostTemplate = async ({
   )
 }
 
-export default PostTemplate
+export default ArticlePage

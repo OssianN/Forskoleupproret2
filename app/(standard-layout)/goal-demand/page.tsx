@@ -24,7 +24,7 @@ type GoalAndDemandEntrySkeleton = {
   }
 }
 
-export const OmOss = async () => {
+export const GoalDemand = async () => {
   const {
     title,
     image1,
@@ -102,4 +102,4 @@ export const OmOss = async () => {
   )
 }
 
-export default OmOss
+export default GoalDemand

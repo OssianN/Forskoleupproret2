@@ -15,7 +15,7 @@ type ViVagrarBrytaLagenEntry = {
   }
 }
 
-const HashTags = async () => {
+const ViVagrarBrytaLagen = async () => {
   const { title, subTitle, introParagraph, introBox } = (
     await client.getEntry<ViVagrarBrytaLagenEntry>('4VOa7y5lFNtsRY07XG1Kyt')
   ).fields
@@ -54,4 +54,4 @@ const HashTags = async () => {
   )
 }
 
-export default HashTags
+export default ViVagrarBrytaLagen
