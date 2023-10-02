@@ -24,7 +24,7 @@ type GoalAndDemandEntrySkeleton = {
   }
 }
 
-export const GoalDemand = async () => {
+const GoalDemand = async () => {
   const {
     title,
     image1,
