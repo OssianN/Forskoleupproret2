@@ -32,7 +32,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li className="nav__item">
-            <Link className="nav__link" href="/goalDemand">
+            <Link className="nav__link" href="/goal-demand">
               Mål & krav
             </Link>
           </li>
