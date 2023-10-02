@@ -1,12 +1,6 @@
 'use client'
 import type { ImageType } from '@/types'
-import {
-  type ReactNode,
-  useState,
-  CSSProperties,
-  useRef,
-  useEffect,
-} from 'react'
+import { type ReactNode, type CSSProperties, useState, useEffect } from 'react'
 import PersonThumbnail from './PersonThumbnail'
 
 type Props = {

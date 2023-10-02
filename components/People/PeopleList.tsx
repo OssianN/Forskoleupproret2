@@ -4,7 +4,7 @@ import { EntryFieldTypes } from 'contentful'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { getImage } from '@/utils'
 
-export type PersonEntry = {
+type PersonEntry = {
   contentTypeId: 'people'
   fields: {
     name: EntryFieldTypes.Text
