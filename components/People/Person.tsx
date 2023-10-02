@@ -39,12 +39,11 @@ export const Person = ({ name, description, image, order }: Props) => {
       className="person__container"
       onMouseOver={() => setSelected(true)}
       onMouseOut={() => setSelected(false)}
-      onClick={() => setSelected(true)}
       style={{
         zIndex: selected ? 200 : 0,
       }}
     >
-      <PersonThumbnail name={name} image={image} />
+      <PersonThumbnail name={name} image={image} setSelected={setSelected} />
 
       <div
         className="person-content__container"

@@ -5,11 +5,16 @@ import type { Dispatch, SetStateAction } from 'react'
 type Props = {
   name: string
   image: ImageType
+  setSelected: Dispatch<SetStateAction<boolean>>
 }
 
-const PersonThumbnail = ({ name, image }: Props) => {
+const PersonThumbnail = ({ name, image, setSelected }: Props) => {
   return (
-    <button className="person-thumbnails__button" name={name}>
+    <button
+      className="person-thumbnails__button"
+      name={name}
+      onClick={() => setSelected(true)}
+    >
       <Image
         className="person-thumbnails__img"
         src={`https:${image.fields?.file.url}`}
