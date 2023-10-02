@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  color: inherit;
+}
+
 .main-layout {
   max-width: $maxWidth;
   min-height: 100vh;
