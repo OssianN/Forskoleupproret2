@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { client } from '@/contentful'
 import type { EntryFieldTypes } from 'contentful'
 import { getImage } from '@/utils'
-import { PeopleList } from '@/components/people/_PeopleList'
+import { PeopleList } from '../../../components/people/_PeopleList'
 import ReactMarkdown from 'react-markdown'
 
 type AboutUsEntry = {
