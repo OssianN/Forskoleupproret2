@@ -19,6 +19,7 @@
     "react-markdown": "^8.0.7",
     "react-scroll": "^1.8.9",
     "sass": "^1.67.0",
+    "sharp": "^0.32.6",
     "typescript": "5.2.2"
   },
   "devDependencies": {
