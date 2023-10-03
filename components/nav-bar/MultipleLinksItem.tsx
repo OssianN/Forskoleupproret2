@@ -5,7 +5,6 @@ import { CSSProperties, useState } from 'react'
 
 const MultipleLinksItem = ({ path }: { path: string }) => {
   const [hashtagListOpen, setHashtagListOpen] = useState<boolean>(false)
-  console.log(path)
 
   return (
     <li

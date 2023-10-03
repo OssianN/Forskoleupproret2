@@ -32,16 +32,21 @@ const News = async ({ list }: Props) => {
         }) => {
           return (
             <li className="press__post-container" key={id}>
-              <Link href={`/article/${slug}`}>
-                <h3 className="press__post-title">{title}</h3>
+              <Link className="press__post-link" href={`/article/${slug}/`}>
+                <div className="press__post-text-container ">
+                  <h3 className="press__post-title">{title}</h3>
+                  <p className="main-p press__post-description">
+                    {description}
+                  </p>
+                </div>
+
+                <Image
+                  className="press__post-image"
+                  src={`https:${getImage(contentImage).fields?.file.url}`}
+                  alt={getImage(contentImage).fields?.title ?? ''}
+                  {...getImage(contentImage).fields?.file.details.image}
+                />
               </Link>
-              <p className="main-p press__post-description">{description}</p>
-              <Image
-                className="press__post-image"
-                src={`https:${getImage(contentImage).fields?.file.url}`}
-                alt={getImage(contentImage).fields?.title ?? ''}
-                {...getImage(contentImage).fields?.file.details.image}
-              />
             </li>
           )
         }
