@@ -20,7 +20,6 @@
     "react-scroll": "^1.8.9",
     "sass": "^1.67.0",
     "sharp": "^0.32.6",
-    "styled-jsx": "^5.1.2",
     "typescript": "5.2.2"
   },
   "devDependencies": {
