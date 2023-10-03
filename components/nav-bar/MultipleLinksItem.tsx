@@ -26,17 +26,27 @@ const MultipleLinksItem = ({ path }: { path: string }) => {
         }
       >
         <Link
-          className={`nav__link ${
-            path === '/hashtags/pressatLage' ? 'orange-text' : ''
-          }`}
+          className="nav__link"
+          style={
+            path === '/hashtags/pressatLage'
+              ? {
+                  color: 'white',
+                }
+              : {}
+          }
           href="/hashtags/pressatLage"
         >
           #pressatläge
         </Link>
         <Link
-          className={`nav__link ${
-            path === '/hashtags/viVagrarBrytaLagen' ? 'orange-text' : ''
-          }`}
+          className="nav__link"
+          style={
+            path === '/hashtags/viVagrarBrytaLagen'
+              ? {
+                  color: 'white',
+                }
+              : {}
+          }
           href="/hashtags/viVagrarBrytaLagen"
         >
           #vivägrarbrytalagen
