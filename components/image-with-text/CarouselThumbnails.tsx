@@ -1,21 +1,23 @@
 import { ImageType } from '@/types'
 import Image from 'next/image'
 
-export const CarouselArrows = ({
-  item,
-  image,
-  isSelected,
-  handleCarouselArrowPress,
-}: {
+type Props = {
   item: number
   image: ImageType
   isSelected: boolean
-  handleCarouselArrowPress: (index: number) => void
-}) => {
+  handleThumbnailClick: (index: number) => void
+}
+
+export const CarouselThumbnails = ({
+  item,
+  image,
+  isSelected,
+  handleThumbnailClick,
+}: Props) => {
   return (
     <button
       className="image-with-text__arrow-button"
-      onClick={() => handleCarouselArrowPress(item)}
+      onClick={() => handleThumbnailClick(item)}
       type="button"
     >
       <Image

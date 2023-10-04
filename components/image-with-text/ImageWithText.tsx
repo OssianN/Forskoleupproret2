@@ -1,8 +1,8 @@
 'use client'
-import { ImageType } from '@/types'
 import Image from 'next/image'
-import { ReactNode, useRef, useState } from 'react'
-import { CarouselArrows } from './CarouselArrows'
+import type { ImageType } from '@/types'
+import { type ReactNode, useEffect, useRef, useState } from 'react'
+import { CarouselThumbnails } from './CarouselThumbnails'
 
 type Props = {
   title: string
@@ -13,7 +13,7 @@ export const ImageWithText = ({ title, images, body }: Props) => {
   const [currentItem, setCurrentItem] = useState<number>(0)
   const ref = useRef<HTMLDivElement>(null)
 
-  const handleCarouselArrowPress = (index: number) => {
+  const handleThumbnailClick = (index: number) => {
     if (!ref.current) return
     const { children } = ref.current
 
@@ -22,11 +22,26 @@ export const ImageWithText = ({ title, images, body }: Props) => {
 
     setCurrentItem(index)
     child.scrollIntoView({
-      behavior: 'smooth',
+      behavior: 'instant',
       block: 'nearest',
       inline: 'start',
     })
   }
+
+  useEffect(() => {
+    const node = ref.current
+
+    const handleScroll = () => {
+      if (!node) return
+      const item = Math.round(
+        (node?.scrollLeft / node?.scrollWidth) * images.length
+      )
+      setCurrentItem(item)
+    }
+
+    node?.addEventListener('scroll', handleScroll)
+    return () => node?.removeEventListener('scroll', handleScroll)
+  }, [images.length])
 
   return (
     <div className="image-with-text__container">
@@ -45,12 +60,12 @@ export const ImageWithText = ({ title, images, body }: Props) => {
 
         <div className="image-with-text__arrow-button-container">
           {images.map((image, i) => (
-            <CarouselArrows
+            <CarouselThumbnails
               key={image.fields?.file.url}
               item={i}
               image={image}
               isSelected={currentItem === i}
-              handleCarouselArrowPress={handleCarouselArrowPress}
+              handleThumbnailClick={handleThumbnailClick}
             />
           ))}
         </div>
