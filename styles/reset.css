@@ -125,9 +125,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-@media (hover: hover) {
-  button:hover {
-    transform: scale(1.05);
-  }
-}
